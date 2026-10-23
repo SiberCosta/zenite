@@ -21,7 +21,7 @@
   function isText(el) {
     var tag = el.tagName;
     if (tag === 'TEXTAREA') return true;
-    return tag === 'INPUT' && !/^(radio|checkbox|button|submit)$/i.test(el.getAttribute('type') || '');
+    return tag === 'INPUT' && !/^(radio|checkbox|button|submit|file|range|color)$/i.test(el.getAttribute('type') || '');
   }
 
   function setProps(el, oldP, newP) {
